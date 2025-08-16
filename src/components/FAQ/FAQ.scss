@@ -1,0 +1,334 @@
+@use '../../styles/variables' as *;
+
+.faq {
+  padding: var(--spacing-4xl) 0;
+  background: var(--bg-white);
+
+  &__container {
+    padding: 0 43px;
+    margin: 0 auto;
+
+    @media (max-width: $breakpoint-xl) {
+      padding: 0 32px;
+    }
+
+    @media (max-width: $breakpoint-lg) {
+      padding: 0 24px;
+    }
+
+    @media (max-width: $breakpoint-md) {
+      padding: 0 12px;
+    }
+
+    @media (max-width: $breakpoint-sm) {
+      padding: 0 0;
+    }
+  }
+
+  &__inner {
+    border-radius: 4rem;
+    background: linear-gradient(146.64deg, #F3F4FF 2.74%, #FFFFFF 82.33%);
+  
+    @media (max-width: $breakpoint-md) {
+      border-radius: 1rem;
+    }
+  }
+
+  &__header {
+    padding: 64px 75px 0;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: var(--spacing-2xl);
+
+    @media (max-width: $breakpoint-lg) {
+      flex-direction: column;
+      gap: var(--spacing-xl);
+      padding: 32px 32px 0;
+    }
+  }
+
+  &__header-left {
+    flex: 1;
+    max-width: 540px;
+
+    @media (max-width: $breakpoint-lg) {
+      max-width: 100%;
+    }
+  }
+
+  &__header-right {
+    flex: 1;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+    align-self: flex-end;
+
+    @media (max-width: $breakpoint-xl) {
+      max-width: 360px;
+    }
+
+    @media (max-width: $breakpoint-lg) {
+      max-width: 100%;
+      align-self: flex-start;
+    }
+  }
+
+  &__title {
+    color: var(--blue-text);
+    font-size: var(--font-size-7xl);
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0;
+
+    @media (max-width: $breakpoint-xl) {
+      font-size: var(--font-size-6xl);
+    }
+
+    @media (max-width: $breakpoint-md) {
+      font-size: var(--font-size-3xl);
+    }
+  }
+
+  &__description {
+    color: var(--secondary-text);
+    font-size: var(--font-size-base);
+    line-height: 1.6;
+    margin: 0;
+
+    @media (max-width: $breakpoint-md) {
+      font-size: var(--font-size-sm);
+    }
+  }
+
+  &__cta-button {
+    background: var(--blue-text);
+    color: var(--white-text);
+    border: none;
+    border-radius: var(--radius-3xl);
+    padding: 1.3rem 1.5rem;
+    font-size: var(--font-size-base);
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    max-width: 206px;
+    justify-content: center;
+    transition: all 0.3s ease;
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(13, 47, 105, 0.2);
+    }
+
+    svg {
+      transition: transform 0.3s ease;
+    }
+  }
+
+  &__content {
+    border-radius: var(--radius-3xl);
+    margin: 0 75px;
+    padding: 64px 0;
+
+    @media (max-width: $breakpoint-lg) {
+      padding: 2rem 0 0;
+      margin: 0 32px 0;
+    }
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+.faq-item {
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  transition: all 0.3s ease;
+
+  &:hover {
+    border-color: var(--border-medium);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  }
+
+  &.open {
+    border-color: var(--primary-color);
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.1);
+  }
+
+  &__question {
+    width: 100%;
+    background: var(--bg-primary);
+    border: none;
+    padding: 1.5rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: left;
+
+    &:focus {
+      outline: none;
+    }
+
+    @media (max-width: $breakpoint-md) {
+      padding: 1.25rem 1.5rem;
+    }
+  }
+
+  &__question-text {
+    color: var(--blue-text);
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+    line-height: 1.4;
+    flex: 1;
+    margin-right: var(--spacing-md);
+    transition: all 0.3s ease;
+
+    @media (max-width: $breakpoint-md) {
+      font-size: var(--font-size-base);
+    }
+  }
+
+  &__icon {
+    flex-shrink: 0;
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--blue-text);
+    border: 1px solid var(--border-pink);
+    border-radius: 50%;
+
+    svg {
+      transition: transform 0.3s ease;
+    }
+  }
+
+  &.open &__icon {
+    background: var(--bg-secondary);
+  }
+
+  &.open &__icon svg {
+    transform: rotate(180deg);
+    color: var(--white-text);
+  }
+
+  &__answer {
+    max-height: 0;
+    overflow: hidden;
+    background: var(--bg-primary);
+    // No transition here for instant expand/collapse
+    &.open {
+      max-height: 500px;
+      padding: 0 2rem 1.5rem 2rem;
+      @media (max-width: $breakpoint-md) {
+        padding: 0 1.5rem 1.25rem 1.5rem;
+      }
+    }
+  }
+
+  &__answer-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+  }
+
+  &__answer-text,
+  &__answer-intro,
+  &__answer-conclusion {
+    color: var(--secondary-text);
+    font-size: var(--font-size-base);
+    line-height: 1.6;
+    margin: 0;
+
+    @media (max-width: $breakpoint-md) {
+      font-size: var(--font-size-sm);
+    }
+  }
+
+  &__answer-intro {
+    font-weight: 500;
+    margin-bottom: 0;
+  }
+
+  &__answer-conclusion {
+    font-weight: 500;
+    margin-top: var(--spacing-xs);
+    padding: var(--spacing-sm) var(--spacing-md);
+    background: rgba(37, 99, 235, 0.05);
+    border-radius: var(--radius-md);
+  }
+
+  &__answer-list {
+    margin: 0;
+    padding-left: var(--spacing-lg);
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+  }
+
+  &__answer-list-item {
+    color: var(--secondary-text);
+    font-size: var(--font-size-base);
+    line-height: 1.6;
+    position: relative;
+    padding-left: var(--spacing-md);
+
+    @media (max-width: $breakpoint-md) {
+      font-size: var(--font-size-sm);
+    }
+
+    &::before {
+      content: " ";
+      font-weight: bold;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      width: 6px;
+      height: 6px;
+      background-color: var(--bg-secondary);
+      border-radius: 50%;
+      transform: translateY(-50%);
+
+    }
+  }
+}
+
+// Responsive adjustments
+@media (max-width: $breakpoint-md) {
+  .faq {
+    padding: var(--spacing-3xl) 0;
+
+    &__header {
+      padding: 32px 16px 0;
+      gap: var(--spacing-sm);
+    }
+
+    &__header-right {
+      gap: var(--spacing-sm);
+    }
+
+    &__title {
+      margin-bottom: var(--spacing-sm);
+    }
+
+    &__description {
+      margin-bottom: var(--spacing-md);
+    }
+
+    &__content {
+      margin: 0 12px;
+    }
+  }
+}

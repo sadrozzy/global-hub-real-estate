@@ -1,0 +1,22 @@
+{
+  "Login": {
+    "title": "Iniciar sesión en My Global Hub",
+    "subtitle": "Regístrate ahora y comienza tu aventura.",
+    "email": "Correo Electrónico",
+    "emailPlaceholder": "Ingresa tu correo electrónico",
+    "password": "Contraseña",
+    "passwordPlaceholder": "Ingresa tu contraseña",
+    "showPassword": "Mostrar contraseña",
+    "hidePassword": "Ocultar contraseña",
+    "forgotPassword": "Olvidé mi Contraseña",
+    "or": "O",
+    "signInWithGoogle": "Iniciar sesión con Google",
+    "signIn": "Iniciar Sesión",
+    "signingIn": "Iniciando sesión...",
+    "dontHaveAccount": "¿Ya tienes una cuenta?",
+    "signUpNow": "Regístrate Ahora",
+    "success": "¡Inicio de sesión exitoso!",
+    "error": "Error al iniciar sesión. Por favor intenta de nuevo.",
+    "googleComingSoon": "¡Inicio de sesión con Google próximamente!"
+  }
+}

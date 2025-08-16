@@ -1,0 +1,59 @@
+{
+  "Search": {
+    "title": "Explora Nuestras Propiedades",
+    "subtitle": "Descubre nuestra cuidada selección de propiedades que se adaptan a distintos estilos de vida y presupuestos. Ya sea que estés buscando un apartamento moderno en la ciudad, una acogedora casa en las afueras o una propiedad para invertir, nuestros listados tienen algo para todos.",
+    "searchPlaceholder": "Busca la Propiedad de Tus Sueños",
+    "searchButton": "Buscar",
+    "resultsFound": "{count, plural, =0 {No se encontraron propiedades} =1 {1 propiedad encontrada} other {# propiedades encontradas}}",
+    "showingResults": "{count, plural, =0 {Sin propiedades} =1 {Mostrando 1 propiedad} other {Mostrando # propiedades}}",
+    "filtersTitle": "Filtros",
+    "clearAll": "Limpiar Todo",
+    "listingType": "Tipo de Listado",
+    "buy": "Comprar",
+    "rent": "Alquilar",
+    "propertyType": "Tipo de Propiedad",
+    "propertyTypes": {
+      "apartment": "Apartamento",
+      "house": "Casa",
+      "villa": "Villa",
+      "condo": "Condominio",
+      "townhouse": "Casa Adosada"
+    },
+    "priceRange": "Rango de Precio",
+    "minPrice": "Precio Mínimo",
+    "maxPrice": "Precio Máximo",
+    "bedrooms": "Habitaciones",
+    "bathrooms": "Baños",
+    "area": "Área (pies²)",
+    "minArea": "Área Mínima",
+    "maxArea": "Área Máxima",
+    "location": "Ubicación",
+    "locationPlaceholder": "Ingresa ciudad o vecindario",
+    "amenities": "Amenidades",
+    "amenitiesList": {
+      "pool": "Piscina",
+      "gym": "Gimnasio",
+      "parking": "Estacionamiento",
+      "garden": "Jardín",
+      "balcony": "Balcón",
+      "elevator": "Ascensor"
+    },
+    "sortBy": "Ordenar Por",
+    "sortByOptions": {
+      "relevance": "Relevancia",
+      "priceLow": "Precio: Menor a Mayor",
+      "priceHigh": "Precio: Mayor a Menor",
+      "newest": "Más Reciente",
+      "areaLarge": "Área Más Grande"
+    },
+    "any": "Cualquiera",
+    "gridView": "Vista de Cuadrícula",
+    "listView": "Vista de Lista",
+    "loadMore": "Cargar Más Propiedades",
+    "loading": "Cargando...",
+    "searchToStart": "Comienza tu búsqueda de propiedades",
+    "searchToStartDescription": "Usa la barra de búsqueda o los filtros para encontrar tu propiedad perfecta.",
+    "noResults": "No se encontraron propiedades",
+    "noResultsDescription": "Intenta ajustar tus criterios de búsqueda o filtros para encontrar más propiedades."
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "ForgotPassword": {
+    "title": "Olvidé mi Contraseña",
+    "subtitle": "Por favor ingresa tu correo electrónico y sigue las instrucciones para restablecer tu contraseña",
+    "email": "Correo Electrónico",
+    "emailPlaceholder": "Ingresa tu correo electrónico",
+    "confirm": "Confirmar",
+    "confirming": "Confirmando...",
+    "back": "Volver",
+    "success": "¡Instrucciones de restablecimiento enviadas a tu correo!",
+    "error": "Error al enviar las instrucciones. Por favor intenta de nuevo."
+  }
+}

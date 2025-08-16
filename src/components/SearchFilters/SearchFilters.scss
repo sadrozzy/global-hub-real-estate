@@ -1,0 +1,342 @@
+@use '../../styles/variables' as *;
+
+.search-filters {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  position: sticky;
+  top: 100px;
+  max-height: calc(100vh - 120px);
+  overflow-y: auto;
+
+  &__header {
+    display: flex;
+    justify-content: between;
+    align-items: center;
+    padding: 20px 24px;
+    border-bottom: 1px solid #e5e7eb;
+    background: #f9fafb;
+  }
+
+  &__title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #111827;
+    margin: 0;
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  &__clear {
+    background: none;
+    border: none;
+    color: #6b7280;
+    font-size: 0.875rem;
+    cursor: pointer;
+    padding: 4px 8px;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+
+    &:hover {
+      color: #374151;
+      background: #e5e7eb;
+    }
+  }
+
+  &__toggle {
+    background: none;
+    border: none;
+    padding: 4px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+    display: none;
+
+    &:hover {
+      background: #e5e7eb;
+    }
+
+    img {
+      transition: transform 0.2s ease;
+    }
+
+    &.collapsed img {
+      transform: rotate(-90deg);
+    }
+
+    @media (max-width: $breakpoint-lg) {
+      display: block;
+    }
+  }
+
+  &__content {
+    padding: 24px;
+    transition: all 0.3s ease;
+
+    &.collapsed {
+      @media (max-width: $breakpoint-lg) {
+        display: none;
+      }
+    }
+  }
+
+  &__group {
+    margin-bottom: 32px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__group-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #111827;
+    margin: 0 0 16px 0;
+  }
+
+  &__checkboxes {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  &__toggle-group {
+    display: flex;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid var(--border-gray);
+    background: var(--bg-primary);
+    margin-bottom: 16px;
+    min-height: 44px;
+    padding: 12px;
+  }
+
+  &__toggle {
+    flex: 1;
+    padding: 10px 16px;
+    border: none;
+    outline: none;
+    background: var(--bg-primary);
+    color: var(--secondary-text);
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    position: relative;
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: var(--font-weight-semibold);
+    border-radius: 0.75rem;
+    transition: all 0.2s ease;
+
+    &:hover {
+      background: var(--bg-light);
+      color: var(--primary-text);
+    }
+
+    &.active {
+      background: var(--bg-secondary);
+      color: var(--white-text);
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    @media (max-width: $breakpoint-sm) {
+      padding: 10px 12px;
+      font-size: 0.875rem;
+    }
+  }
+
+  &__checkbox {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 0.9rem;
+    color: #374151;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: #111827;
+    }
+
+    input[type="checkbox"] {
+      display: none;
+    }
+
+    &:hover &__checkbox-mark {
+      border-color: #3b82f6;
+    }
+  }
+
+  &__checkbox-mark {
+    width: 18px;
+    height: 18px;
+    border: 2px solid #d1d5db;
+    border-radius: 4px;
+    margin-right: 12px;
+    position: relative;
+    transition: all 0.2s ease;
+    flex-shrink: 0;
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 5px;
+      top: 2px;
+      width: 4px;
+      height: 8px;
+      border: solid white;
+      border-width: 0 2px 2px 0;
+      transform: rotate(45deg);
+      opacity: 0;
+      transition: opacity 0.2s ease;
+    }
+  }
+
+  &__checkbox input[type="checkbox"]:checked + &__checkbox-mark {
+    background: #3b82f6;
+    border-color: #3b82f6;
+
+    &::after {
+      opacity: 1;
+    }
+  }
+
+
+
+  &__buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  &__button {
+    padding: 8px 16px;
+    border: 2px solid #e5e7eb;
+    background: white;
+    color: #6b7280;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+
+    &:hover {
+      border-color: var(--bg-secondary);
+      color: var(--bg-secondary);
+    }
+
+    &.active {
+      background: var(--bg-secondary);
+      border-color: var(--bg-secondary);
+      color: white;
+    }
+  }
+
+  &__range {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  &__range-inputs {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+
+    span {
+      color: #6b7280;
+      font-weight: 500;
+    }
+  }
+
+  &__range-input {
+    flex: 1;
+    padding: 10px 12px;
+    border: 2px solid #e5e7eb;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+
+    &:focus {
+      outline: none;
+      border-color: #3b82f6;
+      box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+    }
+
+    &::placeholder {
+      color: #9ca3af;
+    }
+  }
+
+  &__text-input {
+    width: 100%;
+    padding: 12px 16px;
+    border: 2px solid #e5e7eb;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+
+    &:focus {
+      outline: none;
+      border-color: #3b82f6;
+      box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+    }
+
+    &::placeholder {
+      color: #9ca3af;
+    }
+  }
+
+  &__select {
+    width: 100%;
+    padding: 12px 16px;
+    border: 2px solid #e5e7eb;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    background: white;
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+    &:focus {
+      outline: none;
+      border-color: #3b82f6;
+      box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+    }
+  }
+
+  // Mobile responsive
+  @media (max-width: $breakpoint-lg) {
+    position: static;
+    max-height: none;
+    margin-bottom: 24px;
+  }
+
+  @media (max-width: $breakpoint-md) {
+    border-radius: 8px;
+    
+    &__header {
+      padding: 16px 20px;
+    }
+
+    &__content {
+      padding: 20px;
+    }
+
+    &__group {
+      margin-bottom: 24px;
+    }
+  }
+}

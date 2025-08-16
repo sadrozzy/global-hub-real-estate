@@ -1,0 +1,83 @@
+@use '../../../styles/variables' as *;
+
+.search-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  &__container {
+    width: 1290px;
+    margin: 0 auto;
+
+    @media (max-width: $breakpoint-xl) {
+      width: 1180px;
+    }
+
+    @media (max-width: $breakpoint-lg) {
+      max-width: 990px;
+      padding: 0 1rem;
+    }
+
+    @media (max-width: $breakpoint-md) {
+      max-width: 100%;
+      padding: 0 1rem;
+    }
+
+    @media (max-width: $breakpoint-sm) {
+      max-width: 100%;
+      padding: 0 0.5rem;
+    }
+  }
+
+  &__main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__content {
+    flex: 1;
+    padding: 40px 0;
+    background: #f9fafb;
+  }
+
+  &__layout {
+    display: grid;
+    grid-template-columns: 430px 1fr;
+    gap: 48px;
+    align-items: start;
+
+    @media (max-width: $breakpoint-xl) {
+      grid-template-columns: 390px 1fr;
+      gap: 24px;
+    }
+
+    @media (max-width: $breakpoint-lg) {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+  }
+
+  &__filters {
+    @media (max-width: $breakpoint-lg) {
+      order: 2;
+    }
+
+    @media (max-width: $breakpoint-md) {
+      margin: 0 8px;
+    }
+
+    @media (max-width: $breakpoint-sm) {
+      margin: 0 16px;
+    }
+  }
+
+  &__results {
+    position: relative;
+    min-height: 400px;
+
+    @media (max-width: $breakpoint-lg) {
+      order: 1;
+    }
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "About": {
+    "hero": {
+      "title": "About",
+      "description": "My Global Hub is a platform dedicated to connecting people and businesses with global opportunities."
+    },
+    "mission": {
+      "title": "We solve people problem and make it easy",
+      "visionTitle": "Collective Vision Statement",
+      "vision": "We strive to live a purpose-driven life of integrity, creativity, and impact—uplifting others through innovation, compassion, and meaningful connections, while continuously growing as leaders, learners, and global citizens.",
+      "missionTitle": "Collective Mission Statement",
+      "content": "We are committed to using our talents, experiences, and voices to empower communities, create inclusive opportunities, and drive positive change. We aim to lead with empathy, act with discipline, and pursue excellence in all endeavors—balancing ambition with humility and success with service."
+    },
+    "whatWeDo": {
+      "title": "What We Do",
+      "networking": {
+        "title": "Global Networking",
+        "content": "Connect with professionals and businesses worldwide to expand your reach and opportunities."
+      },
+      "solutions": {
+        "title": "Digital Solutions",
+        "content": "Leverage our platform for e-commerce, real estate, education, and more—tailored for global success."
+      },
+      "support": {
+        "title": "Expert Support",
+        "content": "Our team provides guidance and resources to help you navigate international markets with confidence."
+      }
+    },
+    "meetTheTeam": {
+      "title": "Meet the Team",
+      "member1": {
+        "name": "Carmen M. Perez-De La Matta",
+        "role": "Founder of My Global Hub",
+        "bio1": "Carmen is a seasoned U.S. federal government professional with extensive experience in administrative services, human resources, logistics, records management, contract management, finance, and accounting.",
+        "bio2": "She has held a variety of critical roles within federal civilian agencies, overseeing complex workflows, coordinating interdepartmental functions, and ensuring regulatory compliance. In the private sector, Carmen has managed operations in real estate brokerage, property management, and financial administration, and currently leads My Global Hub—an international platform for real estate, e-commerce, and certified professional directories. She holds a Master of Arts in Leadership and a Bachelor of Science in Business Administration (BSBA) with dual concentrations in Contract Management and Government Accounting.",
+        "bio3": "Her certifications include DAWIA Level III in Contracting under the Defense Acquisition Workforce Improvement Act and a Lean Six Sigma Green Belt. Carmen is fluent in English and Spanish and has basic proficiency in Korean."
+      },
+      "member2": {
+        "name": "Edwin Perez Montalvo",
+        "role": "Co-Founder and Chief Strategy Officer of My Global Hub",
+        "bio1": "Co-Founder and Chief Strategy Officer of My Global Hub, brings over 36 years of distinguished military and civilian service with the U.S. Army, specializing in human capital strategy, global workforce transformation, and organizational design.",
+        "bio2": "With a proven track record overseeing HR operations for over 120,000 personnel, Edwin leads the company’s strategic vision to simplify cross-border employment and enable global talent mobility. He holds a Master’s degree in Human Resource Management (Project Management) from Keller Graduate School of Management and a Bachelor’s in Technical Management (Human Resources) from DeVry University—grounding his leadership in both practical expertise and academic rigor.",
+        "bio3": "His work is central to helping organizations build resilient, inclusive, and future-ready workforce systems."
+      },
+      "member3": {
+        "name": "Andy Chen",
+        "role": "Senior Software Engineer at My Global Hub",
+        "bio1": "Andy Chen is a seasoned software engineer with over a decade of software and mobile apps development experience, contributing to enterprise platforms and startup innovations. His career spans leading organizations such as Baidu, TripAdvisor, and startups, where he honed his expertise in scalable architecture, clean code practices, and cross-functional collaboration.",
+        "bio2": "At My Global Hub, Andy focuses on building high-quality digital solutions through thoughtful design, robust implementation, and clear documentation. He is passionate about knowledge-sharing and regularly mentors teammates on engineering best practices, fostering a culture of continuous learning and technical excellence.",
+        "bio3": "Outside of his core responsibilities, Andy is an active open-source contributor and engages with the global developer community on GitHub. He holds a Bachelor's degree in Electronic Commerce, blending technical acumen with business insight to drive value in every project he leads."
+      },
+      "member4": {
+        "name": "Maria Nikolava",
+        "role": "UI/UX Designer at My Global Hub",
+        "bio1": "Maria is a passionate UI/UX Designer with a strong foundation in user-centered design and a keen eye for visual detail. With years of experience crafting intuitive interfaces for web and mobile platforms, she brings a balanced approach to functionality and aesthetics. Prior to joining My Global Hub, Maria collaborated with cross-functional teams on digital products across industries ranging from e-commerce to education, delivering elegant solutions that enhance user engagement and accessibility.",
+        "bio2": "At My Global Hub, Maria focuses on creating seamless digital experiences that align with both user needs and business goals. She excels in user research, prototyping, and high-fidelity UI design, always advocating for inclusive design principles and usability best practices.",
+        "bio3": "Beyond her design work, Maria actively contributes to internal design systems, mentors junior designers, and stays involved in the wider design community through workshops and online forums. She holds a Master degree in Graphic Design, which she leverages to bridge form and function in every interface she designs."
+      },
+      "member5": {
+        "name": "Edgar Arguello",
+        "role": "Director of Marketing at My Global Hub",
+        "bio1": "A graduate of Universidad del Pacifico in Chile, he has dedicated the last 27 years to online marketing management. He holds a postgraduate and a Master's degree in Marketing. A Digital corporate marketing consultant and an international speaker on social media and digital marketing, with keynote speeches in Colombia, Panama, Puerto Rico, and the Dominican Republic.",
+        "bio2": "At My Global Hub, Edgar brings not only deep expertise in digital strategy but also a genuine passion for helping brands grow with purpose and authenticity. With his global perspective and decades of hands-on experience, he guides our clients in navigating the complexities of online marketing with clarity and confidence. Edgar's collaborative spirit, creativity, and strategic insight have become an integral part of how we deliver value empowering businesses to connect meaningfully with their audiences and thrive in an ever-evolving digital world.",
+        "bio3": "He has been the coordinator and a professor for Unibe's Community Management Diploma for 13 years and also teaches at CAES, CEF, and UNICDA (the Dominican-American Cultural Institute)."
+      },
+      "member6": {
+        "name": "Randy Oscar",
+        "role": "Sales Manager at My Global Hub",
+        "bio1": "Sales Manager with a background in Tourism Management and certified experience in hospitality, sales, and customer service. He has developed his career through hands-on roles in high-end resorts and formal training programs focused on external sales, mixology, and guest service excellence. Known for his ability to lead by example, Randy excels in promoting services, upselling premium experiences, and building strong client relationships in fast-paced, multicultural environments.",
+        "bio2": "He holds recognized certifications as an External Sales Representative, Sales Assistant, Office and Internet Tools Operator, Room Attendant, and Warehouse Assistant. His qualifications are further reinforced by specialized training in workplace motivation and professional development, supporting his leadership and coaching abilities.",
+        "bio3": "Currently, Randy is advancing his English proficiency and expanding his knowledge in digital marketing, personal branding, and freelance platforms. With an entrepreneurial mindset and strong ethical values, he is preparing to launch an online venture that combines his sales expertise with modern, client-focused digital solutions. His professional approach is marked by adaptability, self-discipline, and a constant drive for growth and innovation."
+      }
+    },
+    "readyToGoGlobal": {
+      "title": "Ready to Go Global?",
+      "content": "Join MyGlobalHub today and unlock a world of opportunities. Whether you’re an individual or a business, we’re here to help you succeed internationally.",
+      "cta": "Contact Us"
+    }
+  }
+} 

@@ -1,0 +1,18 @@
+{
+  "ResetPassword": {
+    "title": "Forgot Password",
+    "subtitle": "Please enter new password",
+    "newPassword": "New Password",
+    "newPasswordPlaceholder": "Enter your new password",
+    "confirmPassword": "Confirm Password",
+    "confirmPasswordPlaceholder": "Confirm your new password",
+    "showPassword": "Show password",
+    "hidePassword": "Hide password",
+    "save": "Save",
+    "saving": "Saving...",
+    "success": "Password reset successful! Redirecting to login...",
+    "error": "Failed to reset password. Please try again.",
+    "passwordMismatch": "Passwords do not match",
+    "passwordTooShort": "Password must be at least 8 characters long"
+  }
+}

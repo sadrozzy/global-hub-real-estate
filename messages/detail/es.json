@@ -1,0 +1,54 @@
+{
+  "DetailPage": {
+    "breadcrumb": {
+      "home": "Inicio",
+      "properties": "Propiedades"
+    },
+    "badges": {
+      "certified": "Certificado",
+      "forSale": "En Venta",
+      "forRent": "En Alquiler"
+    },
+    "sections": {
+      "propertyDetails": "Detalles de la Propiedad",
+      "aboutThisHome": "Acerca de esta casa",
+      "listedByAgent": "Listado por agente de propiedades",
+      "location": "Ubicación",
+      "relatedProperties": "Propiedades Relacionadas",
+      "relatedSubtitle": "Descubre otras propiedades similares a esta, apartamentos y otras viviendas que buscas comprar o alquilar, y una variedad de opciones para adaptarse a tu estilo de vida y presupuesto."
+    },
+    "details": {
+      "bedrooms": "# de Dormitorios",
+      "bathrooms": "# de Baños",
+      "area": "Área",
+      "type": "Tipo",
+      "yearBuilt": "Año de Construcción",
+      "parking": "Estacionamiento",
+      "floors": "# de Pisos",
+      "listingDate": "Fecha de Listado",
+      "lotSize": "Tamaño del Lote",
+      "structureSize": "Tamaño de la Estructura",
+      "furnished": "Amueblado",
+      "ground": "Suelo",
+      "garage": "Garaje"
+    },
+    "status": {
+      "for-sale": "En Venta",
+      "for-rent": "En Alquiler",
+      "sold": "Vendido",
+      "rented": "Alquilado"
+    },
+    "buttons": {
+      "getStarted": "Comenzar",
+      "contactAgent": "Contactar Agente"
+    },
+    "map": {
+      "viewOnMap": "Ver en Mapa"
+    },
+    "error": {
+      "title": "Propiedad No Encontrada",
+      "notFound": "La propiedad que buscas no pudo ser encontrada.",
+      "goBack": "Volver"
+    }
+  }
+}

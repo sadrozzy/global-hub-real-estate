@@ -1,0 +1,25 @@
+{
+  "Register": {
+    "title": "Bienvenido a My Global Hub",
+    "subtitle": "Regístrate ahora y comienza tu aventura.",
+    "customer": "Cliente",
+    "agent": "Agente",
+    "fullName": "Nombre Completo",
+    "fullNamePlaceholder": "Ingresa tu nombre completo",
+    "email": "Correo Electrónico",
+    "emailPlaceholder": "Ingresa tu correo electrónico",
+    "password": "Contraseña",
+    "passwordPlaceholder": "Ingresa tu contraseña",
+    "showPassword": "Mostrar contraseña",
+    "hidePassword": "Ocultar contraseña",
+    "or": "O",
+    "signUpWithGoogle": "Registrarse con Google",
+    "signUp": "Registrarse",
+    "signingUp": "Registrando...",
+    "alreadyHaveAccount": "¿Ya tienes una cuenta?",
+    "signInNow": "Iniciar Sesión Ahora",
+    "success": "¡Registro exitoso!",
+    "error": "Error en el registro. Por favor intenta de nuevo.",
+    "googleComingSoon": "¡Registro con Google próximamente!"
+  }
+}

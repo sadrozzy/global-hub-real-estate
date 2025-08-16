@@ -1,0 +1,275 @@
+{
+  "Hero": {
+    "title": "Mercado Inmobiliario Global",
+    "poweredBy": "Desarrollado por My Global Hub",
+    "cta": "Publica tu propiedad en nuestra red global"
+  },
+  "GlobalListings": {
+    "title": "Listados Globales",
+    "description": "Descubre la propiedad de tus sueños de nuestra selección curada de casas, apartamentos y villas. Ya sea que busques comprar o alquilar, ofrecemos una variedad de opciones para adaptarse a tu estilo de vida y presupuesto",
+    "viewMore": "Ver más"
+  },
+  "Services": {
+    "title": "Nuestros Servicios",
+    "subtitle": "Soluciones Integrales para el Éxito Global",
+    "description": "Explora nuestra amplia gama de servicios diseñados para satisfacer tus necesidades personales y empresariales a nivel global.",
+    "items": {
+      "realEstate": {
+        "title": "Bienes Raíces",
+        "description": "Encuentra la propiedad perfecta en cualquier parte del mundo con nuestra plataforma integral de bienes raíces.",
+        "features": [
+          "Listados globales",
+          "Recorridos virtuales",
+          "Agentes expertos",
+          "Transacciones seguras"
+        ],
+        "learnMoreBtnText": "Más información",
+        "primaryBtnText": "Explorar Listados"
+      },
+      "eCommerce": {
+        "title": "Comercio Electrónico",
+        "description": "Construye y escala tu negocio en línea con nuestras potentes soluciones de comercio electrónico.",
+        "features": [
+          "Multiplataforma",
+          "Integración de pagos",
+          "Gestión de inventario",
+          "Análisis"
+        ],
+        "learnMoreBtnText": "Más información",
+        "primaryBtnText": "Comenzar Compra"
+      },
+      "employment": {
+        "title": "Bolsa de Empleo",
+        "description": "Conéctate con oportunidades globales y encuentra tu empleo ideal o al candidato perfecto.",
+        "features": [
+          "Emparejamiento de empleos",
+          "Creador de CV",
+          "Preparación para entrevistas",
+          "Orientación profesional"
+        ],
+        "learnMoreBtnText": "Más información",
+        "primaryBtnText": "Explorar Empleos"
+      },
+      "education": {
+        "title": "Educación",
+        "description": "Accede a programas educativos y de formación de clase mundial desde cualquier parte del mundo.",
+        "features": [
+          "Cursos en línea",
+          "Certificaciones",
+          "Instructores expertos",
+          "Aprendizaje flexible"
+        ],
+        "learnMoreBtnText": "Más información",
+        "primaryBtnText": "Explorar Cursos"
+      },
+      "finance": {
+        "title": "Servicios Financieros",
+        "description": "Administra tus finanzas globalmente con soluciones bancarias seguras y eficientes.",
+        "features": [
+          "Multimoneda",
+          "Transferencias seguras",
+          "Herramientas de inversión",
+          "Planificación financiera"
+        ],
+        "learnMoreBtnText": "Más información",
+        "primaryBtnText": "Encontrar Profesionales"
+      },
+      "conciergeServices": {
+        "title": "Servicios de Concierge",
+        "description": "Obtén asistencia personalizada para tus necesidades globales.",
+        "features": [
+          "Asistencia personalizada",
+          "Planificación de viajes",
+          "Organización de eventos",
+          "Servicios de concierge"
+        ],
+        "learnMoreBtnText": "Más información",
+        "primaryBtnText": "Programar Servicios"
+      },
+      "certifiedProfessionals": {
+        "title": "Profesionales Certificados",
+        "description": "Verifica profesionales con licencia como médicos, abogados, ingenieros y terapeutas.",
+        "features": [
+          "Buscar profesionales",
+          "Consultar reseñas",
+          "Reservar consultas"
+        ],
+        "learnMoreBtnText": "Más información",
+        "primaryBtnText": "Encontrar Profesionales"
+      },
+      "directory": {
+        "title": "Directorio",
+        "description": "Explora un directorio integral de empresas y profesionales a nivel global.",
+        "features": [
+          "Listados de empresas",
+          "Contactos profesionales",
+          "Perfiles verificados",
+          "Búsqueda fácil"
+        ],
+        "learnMoreBtnText": "Más información",
+        "primaryBtnText": "Explorar Listados"
+      },
+      "government": {
+        "title": "Gobierno",
+        "description": "Ayuda a los usuarios a acceder, comprender y completar trámites relacionados con el gobierno.",
+        "features": [
+          "Documentos oficiales",
+          "Información de visas",
+          "Servicios públicos",
+          "Localizador de embajadas"
+        ],
+        "learnMoreBtnText": "Más información",
+        "primaryBtnText": "Explorar Servicios"
+      },
+      "healthcare": {
+        "title": "Salud",
+        "description": "Encuentra proveedores de salud y recursos médicos a nivel mundial.",
+        "features": [
+          "Doctores",
+          "Hospitales",
+          "Telemedicina",
+          "Seguro médico"
+        ],
+        "learnMoreBtnText": "Más información",
+        "primaryBtnText": "Encontrar Proveedores"
+      },
+      "restaurants": {
+        "title": "Restaurantes",
+        "description": "Descubre y reserva los mejores restaurantes del mundo.",
+        "features": [
+          "Listados de restaurantes",
+          "Reservas en línea",
+          "Reseñas",
+          "Guías gastronómicas"
+        ],
+        "learnMoreBtnText": "Más información",
+        "primaryBtnText": "Explorar Restaurantes"
+      },
+      "propertyManagement": {
+        "title": "Administración de Propiedades",
+        "description": "Administra tus propiedades de manera eficiente con nuestras soluciones globales.",
+        "features": [
+          "Gestión de inquilinos",
+          "Mantenimiento",
+          "Cobro de rentas",
+          "Reportes"
+        ],
+        "learnMoreBtnText": "Más información",
+        "primaryBtnText": "Nuestros Servicios"
+      },
+      "travelGuide": {
+        "title": "Guía de Viajes",
+        "description": "Obtén consejos y guías de viaje de expertos para cualquier destino.",
+        "features": [
+          "Guías de destinos",
+          "Consejos de viaje",
+          "Itinerarios",
+          "Información local"
+        ],
+        "learnMoreBtnText": "Más información",
+        "primaryBtnText": "Planificar Viaje"
+      },
+      "entertainment": {
+        "title": "Entretenimiento",
+        "description": "Eventos en la ciudad, vida nocturna y cosas para hacer.",
+        "features": [
+          "Buscar por categoría",
+          "Calendario de eventos",
+          "Agrega tus propios eventos",
+          "Promociones"
+        ],
+        "learnMoreBtnText": "Más información",
+        "primaryBtnText": "Eventos Próximos"
+      },
+      "exPats": {
+        "title": "Expatriados",
+        "description": "Centro de apoyo para extranjeros viviendo en el exterior.",
+        "features": [
+          "Guías específicas",
+          "Referencias profesionales",
+          "Foros sociales"
+        ],
+        "learnMoreBtnText": "Más información",
+        "primaryBtnText": "Navegar Proceso"
+      },
+      "help": {
+        "title": "Centro de Ayuda",
+        "description": "Soporte al cliente, comentarios y orientación.",
+        "features": [
+          "Preguntas frecuentes",
+          "Chat en vivo",
+          "Comentarios colectivos",
+          "Contactos"
+        ],
+        "learnMoreBtnText": "Más información",
+        "primaryBtnText": "Explorar Temas"
+      }
+    }
+  },
+  "WhyUs": {
+    "title": "Por qué elegir My Global Hub",
+    "subtitle": "Beneficios",
+    "description": "My Global Hub es su plataforma internacional integral diseñada para conectar personas, propiedades y profesionales a través de fronteras.",
+    "hubText": "My Global Hub",
+    "features": {
+      "global": {
+        "title": "Alcance Global",
+        "description": "Automatice tareas y ahorre tiempo. Con un solo clic puede aceptar o rechazar."
+      },
+      "secure": {
+        "title": "Seguro y Confiable",
+        "description": "Sus datos y transacciones están protegidos con seguridad de nivel empresarial."
+      },
+      "innovative": {
+        "title": "Tecnología Innovadora",
+        "description": "Construido con tecnología de vanguardia para un rendimiento y experiencia de usuario óptimos."
+      },
+      "support": {
+        "title": "Soporte 24/7",
+        "description": "Nuestro equipo dedicado está disponible las 24 horas para ayudarle."
+      }
+    }
+  },
+  "Testimonials": {
+    "title": "Lo que dice la gente",
+    "items": [
+      {
+        "quote": "Perfecto para las necesidades de nuestro negocio",
+        "description": "MyGlobalHub ha transformado la forma en que gestionamos nuestras operaciones globales. La plataforma es intuitiva y el equipo de soporte siempre es muy servicial.",
+        "author": {
+          "name": "Alex Smith",
+          "role": "Gerente de Operaciones",
+          "avatar": "/images/testimonials/avatar.png"
+        },
+        "rating": 5
+      }
+    ]
+  },
+  "FAQ": {
+    "title": "Preguntas Frecuentes",
+    "description": "Encuentra respuestas claras a las preguntas más comunes sobre el uso de MyGlobalHub International Realty, desde la configuración de la cuenta y los servicios hasta seguridad, soporte y más.",
+    "getStartedBtnText": "Empieza Gratis"
+  },
+  "Features": {
+    "title": "Por Qué Elegir MyGlobalHub",
+    "subtitle": "Innovación Encuentra Confiabilidad",
+    "items": {
+      "global": {
+        "title": "Alcance Global",
+        "description": "Conéctate con oportunidades en todo el mundo a través de nuestra extensa red."
+      },
+      "secure": {
+        "title": "Seguro y Confiable",
+        "description": "Tus datos y transacciones están protegidos con seguridad de nivel empresarial."
+      },
+      "innovative": {
+        "title": "Tecnología Innovadora",
+        "description": "Construido con tecnología de vanguardia para un rendimiento y experiencia de usuario óptimos."
+      },
+      "support": {
+        "title": "Soporte 24/7",
+        "description": "Nuestro equipo dedicado está disponible las 24 horas para asistirte."
+      }
+    }
+  }
+}

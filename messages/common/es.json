@@ -1,0 +1,81 @@
+{
+  "Header": {
+    "nav": {
+      "home": "Inicio",
+      "services": "Servicios",
+      "properties": "Propiedades",
+      "about": "Sobre Nosotros",
+      "contact": "Contáctanos",
+      "benefits": "Beneficios",
+      "en": "English Version",
+      "es": "Versión en Español"
+    },
+    "language": "Idioma",
+    "languages": {
+      "en": "English",
+      "es": "Español"
+    },
+    "cta": "Comenzar"
+  },
+  "Footer": {
+    "description": "MyGlobalHub es tu socio de confianza para soluciones digitales y oportunidades globales.",
+    "sections": {
+      "company": {
+        "title": "Empresa",
+        "links": [
+          "Acerca de Nosotros",
+          "Carreras",
+          "Prensa",
+          "Blog"
+        ]
+      },
+      "services": {
+        "title": "Servicios",
+        "links": [
+          "Profesionales Certificados",
+          "Servicios de Concierge",
+          "Directorio",
+          "Educación",
+          "Empleo",
+          "Comercio Electrónico",
+          "Gobierno",
+          "Salud",
+          "Restaurantes",
+          "Administración de Propiedades",
+          "Bienes Raíces",
+          "Entretenimiento",
+          "Guía de Viajes",
+          "Expatriados"
+        ]
+      },
+      "support": {
+        "title": "Soporte",
+        "links": [
+          "Centro de Ayuda",
+          "Contáctanos",
+          "Guía de Estilos",
+          "Licencias",
+          "Registro de Cambios"
+        ]
+      }
+    },
+    "social": {
+      "linkedin": "LinkedIn",
+      "twitter": "X (Twitter)",
+      "instagram": "Instagram",
+      "facebook": "Facebook"
+    },
+    "copyright": "© 2025 - MyGlobalHub. Todos los derechos reservados.",
+    "legal": {
+      "terms": "Términos y Condiciones",
+      "privacy": "Política de Privacidad",
+      "cookies": "Cookies"
+    }
+  },
+  "Common": {
+    "loading": "Cargando...",
+    "error": "Error",
+    "moduleNotFound": "Módulo No Encontrado",
+    "moduleNotFoundMessage": "El módulo \"{moduleName}\" no fue encontrado."
+  }
+}

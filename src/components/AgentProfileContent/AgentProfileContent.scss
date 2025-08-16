@@ -1,0 +1,233 @@
+@use '../../styles/variables.scss' as *;
+
+.agent-profile-content {
+  background: var(--bg-secondary);
+  border-radius: 12px;
+  min-height: 400px;
+
+  &__loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 2rem;
+    color: rgba(255, 255, 255, 0.7);
+  }
+
+  &__loading-spinner {
+    width: 40px;
+    height: 40px;
+    border: 3px solid rgba(255, 255, 255, 0.2);
+    border-top: 3px solid white;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 1rem;
+  }
+
+  &__error {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 2rem;
+    color: var(--error-color);
+    text-align: center;
+  }
+
+  &__card {
+    background: var(--bg-primary);
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+
+  &__header {
+    background: var(--bg-secondary);
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    position: relative;
+    
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: calc(100% - 4rem);
+      height: 1px;
+      background-color: var(--border-gray-light);
+    }
+
+    @media (max-width: $breakpoint-sm) {
+      padding: 1.5rem;
+      flex-direction: column;
+      text-align: center;
+      gap: 1rem;
+    }
+  }
+
+  &__avatar {
+    flex-shrink: 0;
+  }
+
+  &__avatar-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid rgba(255, 255, 255, 0.2);
+  }
+
+  &__name-section {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+
+    @media (max-width: $breakpoint-sm) {
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+  }
+
+  &__name {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0;
+
+    @media (max-width: $breakpoint-sm) {
+      font-size: 1.25rem;
+    }
+  }
+
+  &__edit-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.2);
+      border-color: rgba(255, 255, 255, 0.3);
+    }
+
+    svg {
+      width: 14px;
+      height: 14px;
+    }
+  }
+
+  &__info {
+    background: var(--bg-secondary);
+    border-radius: 0 0 12px 12px;
+    padding: 2rem;
+
+    @media (max-width: $breakpoint-sm) {
+      padding: 1.5rem;
+    }
+  }
+
+  &__section {
+    margin-bottom: 1.5rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__row {
+    display: flex;
+    align-items: center;
+
+    &--header {
+      padding-bottom: 0.5rem;
+    }
+
+    &--value {
+      padding-bottom: 1rem;
+    }
+
+    @media (max-width: $breakpoint-sm) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
+  }
+
+  &__label {
+    min-width: 120px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+    margin-right: 2rem;
+
+    @media (max-width: $breakpoint-sm) {
+      min-width: auto;
+      margin-right: 0;
+      font-size: 0.875rem;
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  &__label-spacer {
+    min-width: 120px;
+    margin-right: 2rem;
+
+    @media (max-width: $breakpoint-sm) {
+      display: none;
+    }
+  }
+
+  &__field-label {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--bg-pink);
+    flex: 1;
+    margin-right: 2rem;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    @media (max-width: $breakpoint-sm) {
+      font-size: 0.75rem;
+      margin-right: 0;
+      margin-bottom: 0.25rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+  }
+
+  &__field-value {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: white;
+    flex: 1;
+    margin-right: 2rem;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    @media (max-width: $breakpoint-sm) {
+      margin-right: 0;
+      margin-bottom: 0.5rem;
+    }
+  }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

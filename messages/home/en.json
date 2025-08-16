@@ -1,0 +1,274 @@
+{
+  "Hero": {
+    "title": "Global Real Estate Marketplace",
+    "poweredBy": "Powered by My Global Hub",
+    "cta": "List your Property with Our Global Network"
+  },
+  "GlobalListings": {
+    "title": "Global Listings",
+    "description": "Discover your dream property from our curated selection of houses, apartments, and villas. Whether you're looking to buy or rent, we offer a variety of options to suit your lifestyle and budget",
+    "viewMore": "View more"
+  },
+  "Services": {
+    "title": "Our Services",
+    "subtitle": "Comprehensive Solutions for Global Success",
+    "description": "Explore our wide range of services designed to meet your global business and personal needs.",
+    "items": {
+      "realEstate": {
+        "title": "Real Estate",
+        "description": "Find your perfect property worldwide with our comprehensive real estate platform.",
+        "features": [
+          "Global listings",
+          "Virtual tours",
+          "Expert agents",
+          "Secure transactions"
+        ],
+        "learnMoreBtnText": "Learn More",
+        "primaryBtnText": "Explore Listings"
+      },
+      "eCommerce": {
+        "title": "E-Commerce",
+        "description": "Build and scale your online business with our powerful e-commerce solutions.",
+        "features": [
+          "Multi-platform",
+          "Payment integration",
+          "Inventory management",
+          "Analytics"
+        ],
+        "learnMoreBtnText": "Learn More",
+        "primaryBtnText": "Start Shopping"
+      },
+      "employment": {
+        "title": "Employment Board",
+        "description": "Connect with global opportunities and find your dream job or perfect candidate.",
+        "features": [
+          "Job matching",
+          "Resume builder",
+          "Interview prep",
+          "Career guidance"
+        ],
+        "learnMoreBtnText": "Learn More",
+        "primaryBtnText": "Search Jobs"
+      },
+      "education": {
+        "title": "Education",
+        "description": "Access world-class education and training programs from anywhere in the world.",
+        "features": [
+          "Online courses",
+          "Certifications",
+          "Expert instructors",
+          "Flexible learning"
+        ],
+        "learnMoreBtnText": "Learn More",
+        "primaryBtnText": "Explore Courses"
+      },
+      "finance": {
+        "title": "Financial Services",
+        "description": "Manage your finances globally with secure and efficient banking solutions.",
+        "features": [
+          "Multi-currency",
+          "Secure transfers",
+          "Investment tools",
+          "Financial planning"
+        ],
+        "learnMoreBtnText": "Learn More",
+        "primaryBtnText": "Find Professionals"
+      },
+      "certifiedProfessionals": {
+        "title": "Certified Professionals",
+        "description": "Verify licensed professionals such as doctors, lawyers, engineers, and therapists.",
+        "features": [
+          "Search professionals",
+          "Check reviews",
+          "Book Consultations"
+        ],
+        "learnMoreBtnText": "Learn More",
+        "primaryBtnText": "Find Professionals"
+      },
+      "conciergeServices": {
+        "title": "Concierge Services",
+        "description": "Get personalized assistance with your global needs.",
+        "features": [
+          "Personalized assistance",
+          "Travel planning",
+          "Event planning",
+          "Concierge services"
+        ],
+        "learnMoreBtnText": "Learn More",
+        "primaryBtnText": "Schedule Services"
+      },
+      "directory": {
+        "title": "Directory",
+        "description": "Browse a comprehensive directory of global businesses and professionals.",
+        "features": [
+          "Business listings",
+          "Professional contacts",
+          "Verified profiles",
+          "Easy search"
+        ],
+        "learnMoreBtnText": "Learn More",
+        "primaryBtnText": "Browse Listings"
+      },
+      "government": {
+        "title": "Government",
+        "description": "Help users access, understand, and complete government-related tasks.",
+        "features": [
+          "Official documents",
+          "Visa information",
+          "Public services",
+          "Embassy locator"
+        ],
+        "learnMoreBtnText": "Learn More",
+        "primaryBtnText": "Explore Services"
+      },
+      "healthcare": {
+        "title": "Healthcare",
+        "description": "Find healthcare providers and medical resources globally.",
+        "features": [
+          "Doctors",
+          "Hospitals",
+          "Telemedicine",
+          "Health insurance"
+        ],
+        "learnMoreBtnText": "Learn More",
+        "primaryBtnText": "Find Providers"
+      },
+      "restaurants": {
+        "title": "Restaurants",
+        "description": "Discover and book top restaurants around the world.",
+        "features": [
+          "Restaurant listings",
+          "Online reservations",
+          "Reviews",
+          "Cuisine guides"
+        ],
+        "learnMoreBtnText": "Learn More",
+        "primaryBtnText": "Browse Restaurants"
+      },
+      "propertyManagement": {
+        "title": "Property Management",
+        "description": "Manage your properties efficiently with our global solutions.",
+        "features": [
+          "Tenant management",
+          "Maintenance",
+          "Rent collection",
+          "Reporting"
+        ],
+        "learnMoreBtnText": "Learn More",
+        "primaryBtnText": "Our Services"
+      },
+      "travelGuide": {
+        "title": "Travel Guide",
+        "description": "Get expert travel advice and guides for any destination.",
+        "features": [
+          "Destination guides",
+          "Travel tips",
+          "Itineraries",
+          "Local insights"
+        ],
+        "learnMoreBtnText": "Learn More",
+        "primaryBtnText": "Plan Trip"
+      },
+      "entertainment": {
+        "title": "Entertainment",
+        "description": "City events, nightlife, and things to do.",
+        "features": [
+          "Find a category",
+          "Event Calendar",
+          "Add your own events",
+          "Promotions"
+        ],
+        "learnMoreBtnText": "Learn More",
+        "primaryBtnText": "Upcoming Events"
+      },
+      "exPats": {
+        "title": "Ex-pats",
+        "description": "Support hub for foreigners living abroad.",
+        "features": [
+          "Specific guides",
+          "Professional referrals",
+          "Social forums"
+        ],
+        "learnMoreBtnText": "Learn More",
+        "primaryBtnText": "Navigate Process"
+      },
+      "help": {
+        "title": "Help Center",
+        "description": "Customer support, feedback, and guidance.",
+        "features": [
+          "FAQs",
+          "Live chat",
+          "Collective feedback",
+          "Contacts"
+        ],
+        "learnMoreBtnText": "Learn More",
+        "primaryBtnText": "Explore Topics"
+      }
+    }
+  },
+  "WhyUs": {
+    "title": "Why choose My Global Hub",
+    "subtitle": "Benefits",
+    "description": "My Global Hub is your one-stop international platform designed to connect people, properties, and professionals across borders.",
+    "hubText": "My Global Hub",
+    "features": {
+      "global": {
+        "title": "Global Reach",
+        "description": "Automate tasks and save time. With one click you can accept or reject."
+      },
+      "secure": {
+        "title": "Secure & Reliable",
+        "description": "Your data and transactions are protected with enterprise-grade security."
+      },
+      "innovative": {
+        "title": "Innovative Technology",
+        "description": "Built with cutting-edge technology for optimal performance and user experience."
+      },
+      "support": {
+        "title": "24/7 Support",
+        "description": "Our dedicated team is available around the clock to assist you."
+      }
+    }
+  },
+  "Testimonials": {
+    "title": "What People Say",
+    "items": [
+      {
+        "quote": "Perfect for our business needs",
+        "description": "MyGlobalHub has transformed how we handle our global operations. The platform is intuitive and the support team is always helpful.",
+        "author": {
+          "name": "Alex Smith",
+          "role": "Operations Manager"
+        },
+        "rating": 5
+      }
+    ]
+  },
+  "FAQ": {
+    "title": "Frequently Asked Question",
+    "description": "Find clear answers to common questions about using MyGlobalHub International Realty, from account setup and services to security, support, and more.",
+    "getStartedBtnText": "Get Started Free"
+  },
+  "Features": {
+    "title": "Why Choose MyGlobalHub",
+    "subtitle": "Innovation Meets Reliability",
+    "items": {
+      "global": {
+        "title": "Global Reach",
+        "description": "Connect with opportunities worldwide through our extensive network."
+      },
+      "secure": {
+        "title": "Secure & Reliable",
+        "description": "Your data and transactions are protected with enterprise-grade security."
+      },
+      "innovative": {
+        "title": "Innovative Technology",
+        "description": "Built with cutting-edge technology for optimal performance and user experience."
+      },
+      "support": {
+        "title": "24/7 Support",
+        "description": "Our dedicated team is available around the clock to assist you."
+      }
+    }
+  }
+}

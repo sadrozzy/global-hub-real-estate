@@ -1,0 +1,80 @@
+{
+  "About": {
+    "hero": {
+      "title": "Acerca de",
+      "description": "My Global Hub es una plataforma dedicada a conectar personas y empresas con oportunidades globales."
+    },
+    "mission": {
+      "title": "Resolvemos problemas de las personas y lo hacemos fácil",
+      "visionTitle": "Declaración de Visión Colectiva",
+      "vision": "Nos esforzamos por vivir una vida con propósito basada en la integridad, la creatividad y el impacto—elevando a los demás a través de la innovación, la compasión y conexiones significativas, mientras crecemos continuamente como líderes, aprendices y ciudadanos globales.",
+      "missionTitle": "Declaración de Misión Colectiva",
+      "content": "Estamos comprometidos a utilizar nuestros talentos, experiencias y voces para empoderar comunidades, crear oportunidades inclusivas y promover un cambio positivo. Nuestro objetivo es liderar con empatía, actuar con disciplina y buscar la excelencia en todos nuestros esfuerzos—equilibrando la ambición con la humildad y el éxito con el servicio."
+    },
+    "whatWeDo": {
+      "title": "Lo Que Hacemos",
+      "networking": {
+        "title": "Conexión Global",
+        "content": "Conéctate con profesionales y empresas de todo el mundo para ampliar tu alcance y oportunidades."
+      },
+      "solutions": {
+        "title": "Soluciones Digitales",
+        "content": "Aprovecha nuestra plataforma para comercio electrónico, bienes raíces, educación y más—adaptada para el éxito global."
+      },
+      "support": {
+        "title": "Apoyo Experto",
+        "content": "Nuestro equipo proporciona orientación y recursos para ayudarte a navegar en mercados internacionales con confianza."
+      }
+    },
+    "meetTheTeam": {
+      "title": "Conoce al Equipo",
+      "member1": {
+        "name": "Carmen M. Perez-De La Matta",
+        "role": "Fundadora de My Global Hub",
+        "bio1": "Carmen es una profesional experimentada del gobierno federal de EE.UU. con amplia experiencia en servicios administrativos, recursos humanos, logística, gestión de archivos, gestión de contratos, finanzas y contabilidad.",
+        "bio2": "Ha ocupado una variedad de roles críticos en agencias civiles federales, supervisando flujos de trabajo complejos, coordinando funciones interdepartamentales y asegurando el cumplimiento normativo. En el sector privado, Carmen ha gestionado operaciones en corretaje inmobiliario, administración de propiedades y gestión financiera. Actualmente lidera My Global Hub, una plataforma internacional para bienes raíces, comercio electrónico y directorios de profesionales certificados. Posee una Maestría en Liderazgo y una Licenciatura en Administración de Empresas (BSBA) con doble especialización en Gestión de Contratos y Contabilidad Gubernamental.",
+        "bio3": "Sus certificaciones incluyen DAWIA Nivel III en Contratación bajo la Ley de Mejora de la Fuerza Laboral de Adquisiciones de Defensa y un Cinturón Verde en Lean Six Sigma. Carmen domina el inglés y el español, y tiene conocimientos básicos de coreano."
+      },
+      "member2": {
+        "name": "Edwin Perez Montalvo",
+        "role": "Co-Fundador y Director de Estrategia de My Global Hub",
+        "bio1": "Co-Fundador y Director de Estrategia de My Global Hub, tiene más de 36 años de servicio militar y civil con el Ejército de los Estados Unidos, especializado en estrategia de recursos humanos, transformación global del personal y diseño organizacional.",
+        "bio2": "Con un récord probado de supervisar operaciones de recursos humanos para más de 120,000 personas, Edwin lidera la visión estratégica de la empresa para simplificar la contratación internacional y permitir la movilidad global del talento. Posee un Master en Gestión de Recursos Humanos (Gestión de Proyectos) de Keller Graduate School of Management y una Licenciatura en Gestión Técnica (Recursos Humanos) de DeVry University—fundamentando su liderazgo en una combinación de experiencia práctica y rigor académico.",
+        "bio3": "Su trabajo es fundamental para ayudar a las organizaciones a construir sistemas de recursos humanos resilientes, inclusivos y preparados para el futuro."
+      },
+      "member3": {
+        "name": "Andy Chen",
+        "role": "Ingeniero de Software Senior en My Global Hub",
+        "bio1": "Andy Chen es un ingeniero de software con amplia experiencia y más de una década desarrollando software y aplicaciones móviles, contribuyendo tanto a plataformas empresariales como a innovaciones en startups. Su carrera abarca organizaciones líderes como Baidu, TripAdvisor y otras startups, donde perfeccionó su experiencia en arquitectura escalable, prácticas de código limpio y colaboración interfuncional.",
+        "bio2": "En My Global Hub, Andy se enfoca en construir soluciones digitales de alta calidad mediante un diseño cuidadoso, una implementación robusta y una documentación clara. Le apasiona compartir conocimientos y mentoriza regularmente a sus compañeros sobre buenas prácticas de ingeniería, fomentando una cultura de aprendizaje continuo y excelencia técnica.",
+        "bio3": "Fuera de sus responsabilidades principales, Andy es un colaborador activo de proyectos de código abierto y participa en la comunidad global de desarrolladores en GitHub. Tiene una licenciatura en Comercio Electrónico, lo que le permite combinar conocimientos técnicos con una visión empresarial para aportar valor en cada proyecto que lidera."
+      },
+      "member4": {
+        "name": "Maria Nikolava",
+        "role": "Diseñadora UI/UX en My Global Hub",
+        "bio1": "Maria es una apasionada diseñadora UI/UX con una sólida base en diseño centrado en el usuario y un gran ojo para los detalles visuales. Con años de experiencia creando interfaces intuitivas para plataformas web y móviles, aporta un enfoque equilibrado entre funcionalidad y estética. Antes de unirse a My Global Hub, Maria colaboró con equipos multidisciplinarios en productos digitales para industrias que van desde el comercio electrónico hasta la educación, ofreciendo soluciones elegantes que mejoran la accesibilidad y la participación del usuario.",
+        "bio2": "En My Global Hub, Maria se enfoca en crear experiencias digitales fluidas que estén alineadas tanto con las necesidades del usuario como con los objetivos del negocio. Se destaca en investigación de usuarios, prototipado y diseño UI de alta fidelidad, siempre abogando por principios de diseño inclusivo y mejores prácticas de usabilidad.",
+        "bio3": "Más allá de su trabajo de diseño, Maria contribuye activamente a los sistemas de diseño internos, guía a diseñadores junior y participa en la comunidad de diseño a través de talleres y foros en línea. Posee una maestría en Diseño Gráfico, la cual utiliza para conectar forma y función en cada interfaz que diseña."
+      },
+      "member5": {
+        "name": "Edgar Arguello",
+        "role": "Director de Marketing en My Global Hub",
+        "bio1": "Graduado de la Universidad del Pacífico en Chile, ha dedicado los últimos 27 años a la gestión del marketing digital. Posee estudios de posgrado y una Maestría en Marketing. Es consultor corporativo en marketing digital y conferencista internacional sobre redes sociales y marketing digital, con presentaciones destacadas en Colombia, Panamá, Puerto Rico y República Dominicana.",
+        "bio2": "En My Global Hub, Edgar aporta no solo una profunda experiencia en estrategia digital, sino también una genuina pasión por ayudar a las marcas a crecer con propósito y autenticidad. Con su perspectiva global y décadas de experiencia práctica, guía a nuestros clientes en la navegación de la complejidad del marketing en línea con claridad y confianza. Su espíritu colaborativo, creatividad y visión estratégica se han convertido en una parte integral de cómo generamos valor, empoderando a las empresas para conectar de manera significativa con sus audiencias y prosperar en un mundo digital en constante evolución.",
+        "bio3": "Ha sido coordinador y profesor del Diplomado en Community Management de Unibe durante 13 años, y también imparte clases en CAES, CEF y UNICDA (Instituto Cultural Domínico-Americano)."
+      },
+      "member6": {
+        "name": "Randy Oscar",
+        "role": "Gerente de Ventas en My Global Hub",
+        "bio1": "Gerente de Ventas con formación en Gestión del Turismo y experiencia certificada en hospitalidad, ventas y atención al cliente. Ha desarrollado su carrera en roles prácticos en resorts de alta gama y programas de capacitación enfocados en ventas externas, mixología y excelencia en el servicio al huésped. Conocido por su capacidad de liderar con el ejemplo, Randy destaca en la promoción de servicios, venta de experiencias premium y construcción de relaciones sólidas con clientes en entornos multiculturales de ritmo acelerado.",
+        "bio2": "Posee certificaciones reconocidas como Representante de Ventas Externas, Asistente de Ventas, Operador de Herramientas de Oficina e Internet, Camarero de Habitaciones y Asistente de Almacén. Estas calificaciones se complementan con formación especializada en motivación laboral y desarrollo profesional, fortaleciendo sus habilidades de liderazgo y mentoría.",
+        "bio3": "Actualmente, Randy está perfeccionando su dominio del inglés y ampliando sus conocimientos en marketing digital, marca personal y plataformas de trabajo freelance. Con una mentalidad emprendedora y sólidos valores éticos, se está preparando para lanzar un emprendimiento en línea que combine su experiencia en ventas con soluciones digitales modernas enfocadas en el cliente. Su enfoque profesional se caracteriza por la adaptabilidad, la autodisciplina y un constante impulso por el crecimiento y la innovación."
+      }
+    },
+    "readyToGoGlobal": {
+      "title": "¿Listo para Globalizarte?",
+      "content": "Únete a MyGlobalHub hoy y desbloquea un mundo de oportunidades. Ya seas una persona o una empresa, estamos aquí para ayudarte a tener éxito internacionalmente.",
+      "cta": "Contáctanos"
+    }
+  }
+}

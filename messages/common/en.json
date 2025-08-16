@@ -1,0 +1,81 @@
+{
+  "Header": {
+    "nav": {
+      "home": "Home",
+      "services": "Services",
+      "properties": "Properties",
+      "about": "About Us",
+      "contact": "Contact Us",
+      "benefits": "Benefits",
+      "en": "English Version",
+      "es": "Versión en Español"
+    },
+    "language": "Language",
+    "languages": {
+      "en": "English",
+      "es": "Español"
+    },
+    "cta": "Get Started"
+  },
+  "Footer": {
+    "description": "MyGlobalHub is your trusted partner for global digital solutions and opportunities.",
+    "sections": {
+      "company": {
+        "title": "Company",
+        "links": [
+          "About Us",
+          "Careers",
+          "Press",
+          "Blog"
+        ]
+      },
+      "services": {
+        "title": "Services",
+        "links": [
+          "Certified Professionals",
+          "Concierge Services",
+          "Directory",
+          "Education",
+          "Employment",
+          "E-Commerce",
+          "Government",
+          "Healthcare",
+          "Restaurants",
+          "Property Management",
+          "Real Estate",
+          "Entertainment",
+          "Travel Guide",
+          "Ex-pats"
+        ]
+      },
+      "support": {
+        "title": "Support",
+        "links": [
+          "Help Center",
+          "Contact us",
+          "Style Guide",
+          "Licenses",
+          "Changelog"
+        ]
+      }
+    },
+    "social": {
+      "linkedin": "LinkedIn",
+      "twitter": "X (Twitter)",
+      "instagram": "Instagram",
+      "facebook": "Facebook"
+    },
+    "copyright": "© 2025 - MyGlobalHub. All rights reserved.",
+    "legal": {
+      "terms": "Terms & Conditions",
+      "privacy": "Privacy Policy",
+      "cookies": "Cookies"
+    }
+  },
+  "Common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "moduleNotFound": "Module Not Found",
+    "moduleNotFoundMessage": "The requested module \"{moduleName}\" could not be found."
+  }
+}

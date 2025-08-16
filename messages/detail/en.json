@@ -1,0 +1,56 @@
+{
+  "DetailPage": {
+    "breadcrumb": {
+      "home": "Home",
+      "properties": "Properties"
+    },
+    "badges": {
+      "certified": "Certified",
+      "forSale": "For Sale",
+      "forRent": "For Rent",
+      "sold": "Sold",
+      "newListing": "New Listing"
+    },
+    "sections": {
+      "propertyDetails": "Property Details",
+      "aboutThisHome": "About this home",
+      "listedByAgent": "Listed by property Agent",
+      "location": "Location",
+      "relatedProperties": "Related Properties",
+      "relatedSubtitle": "Discover other properties similar to this one, apartments, and other dwellings you are looking to buy or rent, and a variety of options to suit your lifestyle and budget."
+    },
+    "details": {
+      "bedrooms": "# of Bedrooms",
+      "bathrooms": "# of Bathrooms",
+      "area": "Area",
+      "type": "Type",
+      "yearBuilt": "Year Built",
+      "parking": "Parking",
+      "floors": "# of Floors",
+      "listingDate": "Listed Date",
+      "lotSize": "Lot Size",
+      "structureSize": "Structure Size",
+      "furnished": "Furnished",
+      "ground": "Ground",
+      "garage": "Garage"
+    },
+    "status": {
+      "for-sale": "For Sale",
+      "for-rent": "For Rent",
+      "sold": "Sold",
+      "rented": "Rented"
+    },
+    "buttons": {
+      "getStarted": "Get Started",
+      "contactAgent": "Contact Agent"
+    },
+    "map": {
+      "viewOnMap": "View on Map"
+    },
+    "error": {
+      "title": "Property Not Found",
+      "notFound": "The property you're looking for could not be found.",
+      "goBack": "Go Back"
+    }
+  }
+}

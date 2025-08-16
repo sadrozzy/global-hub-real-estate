@@ -1,0 +1,13 @@
+{
+  "ForgotPassword": {
+    "title": "Forgot Password",
+    "subtitle": "Please enter your email and follow the instructions to reset your password",
+    "email": "Email",
+    "emailPlaceholder": "Enter your email",
+    "confirm": "Confirm",
+    "confirming": "Confirming...",
+    "back": "Back",
+    "success": "Password reset instructions sent to your email!",
+    "error": "Failed to send reset instructions. Please try again."
+  }
+}

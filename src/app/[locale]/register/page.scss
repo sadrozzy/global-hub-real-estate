@@ -1,0 +1,65 @@
+@use '../../../styles/variables.scss' as *;
+
+.register-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  &__main {
+    flex: 1;
+    background-color: var(--bg-secondary);
+    padding-top: 152px;
+    padding-bottom: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  &__container {
+    width: 100%;
+    max-width: 706px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    
+    @media (min-width: 768px) {
+      padding: 0;
+    }
+  }
+
+  &__content {
+    width: 100%;
+    max-width: 706px;
+    min-height: 846px;
+    margin: 0 auto;
+    background: var(--bg-primary);
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    
+    @media (min-width: 768px) {
+      padding: 3rem;
+    }
+  }
+
+  &__header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  &__title {
+    font-size: 1.875rem;
+    font-weight: 700;
+    color: var(--primary-text);
+    margin-bottom: 0.5rem;
+    
+    @media (min-width: $breakpoint-md) {
+      font-size: 2.25rem;
+    }
+  }
+
+  &__subtitle {
+    color: var(--secondary-text);
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+}

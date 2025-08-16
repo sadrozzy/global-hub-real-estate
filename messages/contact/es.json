@@ -1,0 +1,62 @@
+{
+  "Contact": {
+    "hero": {
+      "title": "Contacto",
+      "description": "¿Tienes preguntas o necesitas ayuda? Ponte en contacto con nuestro equipo y estaremos encantados de ayudarte."
+    },
+    "info": {
+      "heading": "Información de Contacto",
+      "email": "Correo electrónico",
+      "emailDesc": "Nuestro equipo amigable está aquí para ayudar.",
+      "emailValue": "customerservice@myglobalhub.net",
+      "phone": "Teléfono",
+      "phoneDesc": "Lun-Vie de 8am a 5pm.",
+      "phoneUS": "01-256-417-2352",
+      "phoneDR": "01-256-417-2352",
+      "office": "Oficina",
+      "officeDesc": "Ven a saludar a nuestra oficina central.",
+      "addressValue": "Verón-Punta Cana, Provincia La Altagracia, República Dominicana 23301"
+    },
+    "form": {
+      "heading": "Envíanos un Mensaje",
+      "name": "Nombre Completo",
+      "namePlaceholder": "Ingresa tu nombre completo",
+      "email": "Correo electrónico",
+      "emailPlaceholder": "Ingresa tu correo electrónico",
+      "phone": "Teléfono",
+      "phonePlaceholder": "+1 000 00 00",
+      "message": "Mensaje",
+      "messagePlaceholder": "Escribe aquí",
+      "privacy": "Estás de acuerdo con nuestra política de privacidad amigable.",
+      "submit": "Enviar Mensaje"
+    },
+    "hours": {
+      "heading": "Horario de Atención",
+      "content": "Lunes a Viernes: 9:00 AM - 6:00 PM (EST)"
+    },
+    "social": {
+      "heading": "Conéctate con Nosotros",
+      "linkedin": "LinkedIn",
+      "twitter": "Twitter",
+      "facebook": "Facebook"
+    },
+    "feedback": {
+      "success": {
+        "title": "¡Mensaje Enviado Exitosamente!",
+        "message": "¡Gracias! Tu mensaje ha sido enviado exitosamente. Te responderemos pronto."
+      },
+      "error": {
+        "title": "Error en el Envío",
+        "validation": {
+          "fullNameRequired": "El nombre completo es requerido",
+          "emailRequired": "El correo electrónico es requerido",
+          "emailInvalid": "Por favor ingresa una dirección de correo válida",
+          "phoneRequired": "El número de teléfono es requerido",
+          "messageRequired": "El mensaje es requerido",
+          "privacyRequired": "Es necesario que aceptes nuestra política de privacidad marcando la casilla correspondiente"  
+        },
+        "serverError": "Error al enviar el formulario. Por favor intenta de nuevo."
+      }
+    }
+  }
+}
