@@ -5,7 +5,6 @@ import { redirect } from 'next/navigation'
 import { authConfig } from './config'
 import { LoginResponse, RegisterResponse, User } from './types'
 
-// Базовый запрос к API
 async function authFetch(endpoint: string, options?: RequestInit) {
 	const url = `${authConfig.backendUrl}${endpoint}`
 	console.log('Making request to:', url)
@@ -32,22 +31,19 @@ async function authFetch(endpoint: string, options?: RequestInit) {
 
 		return response
 	} catch (error) {
-		console.error('Fetch error:', error)
+		console.log('Fetch error:', error)
 		throw error
 	}
 }
 
-// Регистрация
-export async function registerAction(
-	formData: FormData
-): Promise<{ error?: string }> {
-	const userData = {
-		first_name: formData.get('first_name') as string,
-		last_name: formData.get('last_name') as string,
-		email: formData.get('email') as string,
-		password: formData.get('password') as string
-	}
-
+export async function registerAction(userData: {
+	first_name: string
+	last_name: string
+	email: string
+	password: string
+	re_password: string
+	role: string
+}): Promise<{ error?: string; success?: boolean }> {
 	console.log('Sending registration data:', userData)
 
 	try {
@@ -74,20 +70,38 @@ export async function registerAction(
 				const errorData = JSON.parse(responseText)
 				console.log('Error data:', errorData)
 
-				// Обрабатываем разные форматы ошибок
-				if (errorData.error) {
-					errorMessage = errorData.error
-				} else if (errorData.detail) {
-					errorMessage = errorData.detail
-				} else if (errorData.message) {
-					errorMessage = errorData.message
+				// Обрабатываем ошибки с вложенными массивами
+				if (typeof errorData === 'object' && errorData !== null) {
+					const errorMessages: string[] = []
+
+					// Проходим по всем полям с ошибками
+					for (const [field, errors] of Object.entries(errorData)) {
+						if (Array.isArray(errors)) {
+							// Добавляем каждую ошибку для поля
+							errors.forEach((error: string) => {
+								errorMessages.push(`${field}: ${error}`)
+							})
+						} else if (typeof errors === 'string') {
+							errorMessages.push(`${field}: ${errors}`)
+						}
+					}
+
+					if (errorMessages.length > 0) {
+						errorMessage = errorMessages.join(', ')
+					} else if (errorData.error) {
+						errorMessage = errorData.error
+					} else if (errorData.detail) {
+						errorMessage = errorData.detail
+					} else if (errorData.message) {
+						errorMessage = errorData.message
+					}
 				} else if (typeof errorData === 'string') {
 					errorMessage = errorData
 				} else {
 					errorMessage = JSON.stringify(errorData)
 				}
 			} catch (parseError) {
-				console.error('Failed to parse error response:', parseError)
+				console.log('Failed to parse error response:', parseError)
 				errorMessage =
 					responseText ||
 					`HTTP ${response.status}: ${response.statusText}`
@@ -96,26 +110,36 @@ export async function registerAction(
 			return { error: errorMessage }
 		}
 
-		// Пытаемся распарсить успешный ответ
 		let data: RegisterResponse
 		try {
 			data = JSON.parse(responseText)
 			console.log('Parsed response data:', data)
 		} catch (parseError) {
-			console.error('Failed to parse success response:', parseError)
+			console.log('Failed to parse success response:', parseError)
 			return { error: 'Invalid response format from server' }
 		}
 
-		// Проверяем, что получили необходимые данные
 		if (!data || !data.id || !data.email) {
-			console.error('Invalid user data received:', data)
+			console.log('Invalid user data received:', data)
 			return { error: 'Invalid user data received from server' }
 		}
 
 		console.log('Registration successful, proceeding to login')
-		return await loginAction(formData)
+
+		const loginResult = await loginAction({
+			email: userData.email,
+			password: userData.password
+		})
+
+		if (loginResult.error) {
+			return {
+				error: `Registration successful but login failed: ${loginResult.error}`
+			}
+		}
+
+		return { success: true }
 	} catch (error) {
-		console.error('Registration network error:', error)
+		console.log('Registration network error:', error)
 		return {
 			error:
 				'Network error: ' +
@@ -124,16 +148,14 @@ export async function registerAction(
 	}
 }
 
-// Логин
-export async function loginAction(
-	formData: FormData
-): Promise<{ error?: string }> {
+export async function loginAction(formData: {
+	email: string
+	password: string
+}): Promise<{ error?: string; success?: boolean }> {
 	const credentials = {
-		email: formData.get('email') as string,
-		password: formData.get('password') as string
+		email: formData.email,
+		password: formData.password
 	}
-
-	console.log('Attempting login with:', { email: credentials.email })
 
 	try {
 		const response = await authFetch('/auth/jwt/create/', {
@@ -141,11 +163,8 @@ export async function loginAction(
 			body: JSON.stringify(credentials)
 		})
 
-		console.log('Login response status:', response.status)
-
 		if (!response.ok) {
 			const responseText = await response.text()
-			console.log('Login error response:', responseText)
 
 			let errorMessage = 'Login failed'
 			try {
@@ -175,18 +194,17 @@ export async function loginAction(
 		try {
 			loginData = JSON.parse(responseText)
 		} catch (parseError) {
-			console.error('Failed to parse login response:', parseError)
+			console.log('Failed to parse login response:', parseError)
 			return { error: 'Invalid login response format' }
 		}
 
 		const { access, refresh } = loginData
 
 		if (!access || !refresh) {
-			console.error('Missing tokens in login response:', loginData)
+			console.log('Missing tokens in login response:', loginData)
 			return { error: 'Missing authentication tokens' }
 		}
 
-		// Сохраняем токены в cookies
 		const cookieStore = await cookies()
 		cookieStore.set({
 			name: authConfig.accessTokenName,
@@ -207,16 +225,15 @@ export async function loginAction(
 		})
 
 		console.log('Login successful, tokens saved')
+		return { success: true }
 	} catch (error) {
-		console.error('Login network error:', error)
+		console.log('Login network error:', error)
 		return {
 			error:
 				'Network error: ' +
 				(error instanceof Error ? error.message : 'Unknown error')
 		}
 	}
-
-	redirect('/profile')
 }
 
 export async function logOutAction() {
@@ -226,12 +243,10 @@ export async function logOutAction() {
 	redirect('/login')
 }
 
-// Получение текущей сессии
 export async function getSession(): Promise<User | null> {
 	const cookieStore = await cookies()
 	const accessToken = cookieStore.get(authConfig.accessTokenName)?.value
 
-	// Пытаемся получить данные с access токеном
 	if (accessToken) {
 		try {
 			const response = await authFetch('/auth/user/', {
@@ -240,11 +255,10 @@ export async function getSession(): Promise<User | null> {
 
 			if (response.ok) return await response.json()
 		} catch (error) {
-			console.error('Failed to fetch user with access token', error)
+			console.log('Failed to fetch user with access token', error)
 		}
 	}
 
-	// Если access токен невалиден, пробуем обновить с refresh токеном
 	return await refreshSession()
 }
 
@@ -267,7 +281,6 @@ async function refreshSession(): Promise<User | null> {
 
 		const { access }: { access: string } = await response.json()
 
-		// Сохраняем новый access токен
 		cookieStore.set({
 			name: authConfig.accessTokenName,
 			value: access,
@@ -277,14 +290,13 @@ async function refreshSession(): Promise<User | null> {
 			path: '/'
 		})
 
-		// Получаем данные пользователя с новым токеном
 		const userResponse = await authFetch('/auth/user/', {
 			headers: { Authorization: `Bearer ${access}` }
 		})
 
 		return userResponse.ok ? await userResponse.json() : null
 	} catch (error) {
-		console.error('Failed to refresh token', error)
+		console.log('Failed to refresh token', error)
 		return null
 	}
 }

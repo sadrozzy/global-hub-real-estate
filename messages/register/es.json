@@ -4,6 +4,10 @@
     "subtitle": "Regístrate ahora y comienza tu aventura.",
     "customer": "Cliente",
     "agent": "Agente",
+    "firstName": "Nombre",
+    "firstNamePlaceholder": "Ingresa tu nombre",
+    "lastName": "Apellido",
+    "lastNamePlaceholder": "Ingresa tu apellido",
     "fullName": "Nombre Completo",
     "fullNamePlaceholder": "Ingresa tu nombre completo",
     "email": "Correo Electrónico",
@@ -20,6 +24,16 @@
     "signInNow": "Iniciar Sesión Ahora",
     "success": "¡Registro exitoso!",
     "error": "Error en el registro. Por favor intenta de nuevo.",
-    "googleComingSoon": "¡Registro con Google próximamente!"
+    "googleComingSoon": "¡Registro con Google próximamente!",
+    "errors": {
+      "fullNameRequired": "El nombre completo es obligatorio",
+      "fullNameMinWords": "Por favor ingresa tu nombre y apellido",
+      "emailRequired": "El correo electrónico es obligatorio",
+      "emailInvalid": "Por favor ingresa un correo electrónico válido",
+      "passwordRequired": "La contraseña es obligatoria",
+      "passwordMinLength": "La contraseña debe contener al menos 6 caracteres",
+      "confirmPasswordRequired": "Por favor confirma tu contraseña",
+      "passwordsDoNotMatch": "Las contraseñas no coinciden"
+    }
   }
 }

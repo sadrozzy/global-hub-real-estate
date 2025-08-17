@@ -17,6 +17,16 @@
     "signUpNow": "Sign Up Now",
     "success": "Login successful!",
     "error": "Login failed. Please try again.",
-    "googleComingSoon": "Google sign in coming soon!"
+    "googleComingSoon": "Google sign in coming soon!",
+    "errors": {
+      "fullNameRequired": "Full name is required",
+      "fullNameMinWords": "Please enter your first and last name",
+      "emailRequired": "Email is required",
+      "emailInvalid": "Please enter a valid email address",
+      "passwordRequired": "Password is required",
+      "passwordMinLength": "Password must contain at least 6 characters",
+      "confirmPasswordRequired": "Please confirm your password",
+      "passwordsDoNotMatch": "Passwords do not match"
+    }
   }
 }

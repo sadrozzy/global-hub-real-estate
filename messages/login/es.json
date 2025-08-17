@@ -17,6 +17,16 @@
     "signUpNow": "Regístrate Ahora",
     "success": "¡Inicio de sesión exitoso!",
     "error": "Error al iniciar sesión. Por favor intenta de nuevo.",
-    "googleComingSoon": "¡Inicio de sesión con Google próximamente!"
+    "googleComingSoon": "¡Inicio de sesión con Google próximamente!",
+    "errors": {
+      "fullNameRequired": "El nombre completo es obligatorio",
+      "fullNameMinWords": "Por favor ingresa tu nombre y apellido",
+      "emailRequired": "El correo electrónico es obligatorio",
+      "emailInvalid": "Por favor ingresa un correo electrónico válido",
+      "passwordRequired": "La contraseña es obligatoria",
+      "passwordMinLength": "La contraseña debe contener al menos 6 caracteres",
+      "confirmPasswordRequired": "Por favor confirma tu contraseña",
+      "passwordsDoNotMatch": "Las contraseñas no coinciden"
+    }
   }
 }

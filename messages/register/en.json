@@ -4,6 +4,10 @@
     "subtitle": "Register now and start your adventure.",
     "customer": "Customer",
     "agent": "Agent",
+    "firstName": "First Name",
+    "firstNamePlaceholder": "Enter your first name",
+    "lastName": "Last Name",
+    "lastNamePlaceholder": "Enter your last name",
     "fullName": "Full Name",
     "fullNamePlaceholder": "Enter your full name",
     "email": "Email",
@@ -20,6 +24,16 @@
     "signInNow": "Sign In Now",
     "success": "Registration successful!",
     "error": "Registration failed. Please try again.",
-    "googleComingSoon": "Google sign up coming soon!"
+    "googleComingSoon": "Google sign up coming soon!",
+    "errors": {
+      "fullNameRequired": "Full name is required",
+      "fullNameMinWords": "Please enter your first and last name",
+      "emailRequired": "Email is required",
+      "emailInvalid": "Please enter a valid email address",
+      "passwordRequired": "Password is required",
+      "passwordMinLength": "Password must contain at least 6 characters",
+      "confirmPasswordRequired": "Please confirm your password",
+      "passwordsDoNotMatch": "Passwords do not match"
+    }
   }
 }

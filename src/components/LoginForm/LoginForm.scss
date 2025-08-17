@@ -40,6 +40,62 @@
     &::placeholder {
       color: #9ca3af;
     }
+
+    &--error {
+      border-color: #dc2626;
+      background-color: #fef2f2;
+      
+      &:focus {
+        border-color: #dc2626;
+        box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1);
+        background-color: white;
+      }
+
+      &::placeholder {
+        color: #fca5a5;
+      }
+    }
+
+    &:hover:not(&--error) {
+      border-color: #d1d5db;
+    }
+
+    &.login-form__input--error:hover {
+      border-color: #b91c1c;
+    }
+  }
+
+  &__error-message {
+    color: #ef4444;
+    font-size: 0.75rem;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__server-error {
+    margin-top: 0.5rem;
+    padding: 0.75rem;
+    background-color: #fef2f2;
+    border: 1px solid #fecaca;
+    border-radius: 8px;
+    
+    .login-form__error-message {
+      color: #dc2626;
+      font-size: 0.875rem;
+      text-align: center;
+      margin: 0;
+    }
+  }
+
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateY(-4px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 
   &__password-wrapper {

@@ -3,80 +3,110 @@
 import { useState } from 'react'
 import { useLocale, useTranslations } from 'next-intl'
 import Link from 'next/link'
+import { useRouter } from 'next/navigation'
+import { useForm } from 'react-hook-form'
+import { zodResolver } from '@hookform/resolvers/zod'
+import { z } from 'zod'
 import { registerAction } from '@/lib/auth/actions'
 
 import './RegisterForm.scss'
 
-interface FormData {
-	fullName: string
-	email: string
-	password: string
-	userType: 'customer' | 'agent'
-}
+const createRegisterSchema = (t: (key: string) => string) =>
+	z
+		.object({
+			fullName: z
+				.string()
+				.min(1, t('errors.fullNameRequired'))
+				.refine(name => name.trim().split(' ').length >= 2, {
+					message: t('errors.fullNameMinWords')
+				}),
+			email: z
+				.string()
+				.min(1, t('errors.emailRequired'))
+				.email(t('errors.emailInvalid')),
+			password: z
+				.string()
+				.min(1, t('errors.passwordRequired'))
+				.min(6, t('errors.passwordMinLength')),
+			re_password: z.string().min(1, t('errors.confirmPasswordRequired')),
+			role: z.enum(['customer', 'agent'])
+		})
+		.refine(data => data.password === data.re_password, {
+			message: t('errors.passwordsDoNotMatch'),
+			path: ['re_password']
+		})
 
 export default function RegisterForm() {
 	const locale = useLocale()
 	const t = useTranslations('Register')
-	const [formData, setFormData] = useState<FormData>({
-		fullName: '',
-		email: '',
-		password: '',
-		userType: 'agent'
-	})
+	const router = useRouter()
 	const [showPassword, setShowPassword] = useState(false)
+	const [showRePassword, setShowRePassword] = useState(false)
 	const [isLoading, setIsLoading] = useState(false)
+	const [serverError, setServerError] = useState<string>('')
 
-	const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-		const { name, value } = e.target
-		setFormData(prev => ({
-			...prev,
-			[name]: value
-		}))
-	}
+	const registerSchema = createRegisterSchema(t)
+	type RegisterFormData = z.infer<typeof registerSchema>
+
+	const {
+		register,
+		handleSubmit,
+		formState: { errors },
+		reset,
+		watch,
+		setValue
+	} = useForm<RegisterFormData>({
+		resolver: zodResolver(registerSchema),
+		mode: 'all',
+		defaultValues: {
+			role: 'agent'
+		}
+	})
+
+	const watchedRole = watch('role')
 
 	const handleUserTypeChange = (type: 'customer' | 'agent') => {
-		setFormData(prev => ({
-			...prev,
-			userType: type
-		}))
+		setValue('role', type)
 	}
 
-	const handleSubmit = async (e: React.FormEvent) => {
-		e.preventDefault()
+	const onSubmit = async (data: RegisterFormData) => {
 		setIsLoading(true)
+		setServerError('') // Очищаем предыдущие ошибки
 
 		try {
-			const formDataObj = new FormData()
-			formDataObj.append(
-				'first_name',
-				formData.fullName.split(' ')[0] || ''
-			)
-			formDataObj.append(
-				'last_name',
-				formData.fullName.split(' ').slice(1).join(' ') || ''
-			)
-			formDataObj.append('email', formData.email)
-			formDataObj.append('password', formData.password)
+			console.log('Form data:', data)
 
-			console.log('Submitting registration form...')
-			const result = await registerAction(formDataObj)
+			const nameParts = data.fullName.trim().split(' ')
+			const firstName = nameParts[0] || ''
+			const lastName = nameParts.slice(1).join(' ') || ''
+
+			const result = await registerAction({
+				first_name: firstName,
+				last_name: lastName,
+				email: data.email,
+				password: data.password,
+				re_password: data.re_password,
+				role: data.role
+			})
 
 			if (result?.error) {
-				console.error('Registration error from backend:', result.error)
-				// Показываем более информативное сообщение об ошибке
-				const errorMessage = result.error.includes('$undefined')
-					? 'Server returned invalid response. Please try again or contact support.'
-					: result.error
-				alert(`Registration failed: ${errorMessage}`)
-			} else {
-				console.log('Registration successful')
-				alert(t('success'))
+				console.log(JSON.stringify(result.error))
+				setServerError(result.error)
+			} else if (result?.success) {
+				console.log(
+					'Registration successful, redirecting to profile...'
+				)
+				reset()
+				// Редирект на страницу профиля
+				router.push(`/${locale}/profile/agent/me`)
 			}
 		} catch (error) {
-			console.error('Registration error:', error)
-			alert(
-				`Registration error: ${
-					error instanceof Error ? error.message : 'Unknown error'
+			console.log('Registration error:', error)
+			setServerError(
+				`Ошибка регистрации: ${
+					error instanceof Error
+						? error.message
+						: 'Неизвестная ошибка'
 				}`
 			)
 		} finally {
@@ -87,7 +117,7 @@ export default function RegisterForm() {
 	const handleGoogleSignUp = () => {
 		// TODO: Implement Google OAuth
 		console.log('Google sign up clicked')
-		alert(t('googleComingSoon'))
+		console.log(t('googleComingSoon'))
 	}
 
 	return (
@@ -97,7 +127,7 @@ export default function RegisterForm() {
 				<button
 					type='button'
 					className={`register-form__user-type-btn ${
-						formData.userType === 'customer'
+						watchedRole === 'customer'
 							? 'register-form__user-type-btn--active'
 							: ''
 					}`}
@@ -108,7 +138,7 @@ export default function RegisterForm() {
 				<button
 					type='button'
 					className={`register-form__user-type-btn ${
-						formData.userType === 'agent'
+						watchedRole === 'agent'
 							? 'register-form__user-type-btn--active'
 							: ''
 					}`}
@@ -117,24 +147,43 @@ export default function RegisterForm() {
 					{t('agent')}
 				</button>
 			</div>
+			{errors.role && (
+				<p className='register-form__error-message'>
+					{errors.role.message}
+				</p>
+			)}
 
-			<form onSubmit={handleSubmit} className='register-form__form'>
+			<form
+				onSubmit={handleSubmit(onSubmit)}
+				className='register-form__form'
+			>
+				{/* Hidden role field */}
+				<input
+					{...register('role')}
+					type='hidden'
+					value={watchedRole}
+				/>
+
 				{/* Full Name Field */}
 				<div className='register-form__field'>
 					<label htmlFor='fullName' className='register-form__label'>
 						{t('fullName')}*
 					</label>
 					<input
+						{...register('fullName')}
 						type='text'
 						id='fullName'
-						name='fullName'
-						value={formData.fullName}
-						onChange={handleInputChange}
 						placeholder={t('fullNamePlaceholder')}
-						className='register-form__input'
+						className={`register-form__input ${
+							errors.fullName ? 'register-form__input--error' : ''
+						}`}
 						autoComplete='off'
-						required
 					/>
+					{errors.fullName && (
+						<p className='register-form__error-message'>
+							{errors.fullName.message}
+						</p>
+					)}
 				</div>
 
 				{/* Email Field */}
@@ -143,16 +192,20 @@ export default function RegisterForm() {
 						{t('email')}*
 					</label>
 					<input
+						{...register('email')}
 						type='email'
 						id='email'
-						name='email'
-						value={formData.email}
-						onChange={handleInputChange}
 						placeholder={t('emailPlaceholder')}
-						className='register-form__input'
+						className={`register-form__input ${
+							errors.email ? 'register-form__input--error' : ''
+						}`}
 						autoComplete='off'
-						required
 					/>
+					{errors.email && (
+						<p className='register-form__error-message'>
+							{errors.email.message}
+						</p>
+					)}
 				</div>
 
 				{/* Password Field */}
@@ -162,15 +215,16 @@ export default function RegisterForm() {
 					</label>
 					<div className='register-form__password-wrapper'>
 						<input
+							{...register('password')}
 							type={showPassword ? 'text' : 'password'}
 							id='password'
-							name='password'
-							value={formData.password}
-							onChange={handleInputChange}
 							placeholder={t('passwordPlaceholder')}
-							className='register-form__input'
+							className={`register-form__input ${
+								errors.password
+									? 'register-form__input--error'
+									: ''
+							}`}
 							autoComplete='off'
-							required
 						/>
 						<button
 							type='button'
@@ -207,6 +261,74 @@ export default function RegisterForm() {
 							)}
 						</button>
 					</div>
+					{errors.password && (
+						<p className='register-form__error-message'>
+							{errors.password.message}
+						</p>
+					)}
+				</div>
+
+				{/* Confirm Password Field */}
+				<div className='register-form__field'>
+					<label
+						htmlFor='re_password'
+						className='register-form__label'
+					>
+						Подтвердите пароль*
+					</label>
+					<div className='register-form__password-wrapper'>
+						<input
+							{...register('re_password')}
+							type={showRePassword ? 'text' : 'password'}
+							id='re_password'
+							placeholder='Повторите пароль'
+							className={`register-form__input ${
+								errors.re_password
+									? 'register-form__input--error'
+									: ''
+							}`}
+							autoComplete='off'
+						/>
+						<button
+							type='button'
+							className='register-form__password-toggle'
+							onClick={() => setShowRePassword(!showRePassword)}
+							aria-label={
+								showRePassword
+									? 'Скрыть пароль'
+									: 'Показать пароль'
+							}
+						>
+							{showRePassword ? (
+								<svg
+									width='20'
+									height='20'
+									viewBox='0 0 24 24'
+									fill='none'
+									stroke='currentColor'
+								>
+									<path d='M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24' />
+									<line x1='1' y1='1' x2='23' y2='23' />
+								</svg>
+							) : (
+								<svg
+									width='20'
+									height='20'
+									viewBox='0 0 24 24'
+									fill='none'
+									stroke='currentColor'
+								>
+									<path d='M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z' />
+									<circle cx='12' cy='12' r='3' />
+								</svg>
+							)}
+						</button>
+					</div>
+					{errors.re_password && (
+						<p className='register-form__error-message'>
+							{errors.re_password.message}
+						</p>
+					)}
 				</div>
 
 				{/* Divider */}

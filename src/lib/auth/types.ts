@@ -11,4 +11,13 @@ export interface LoginResponse {
 	refresh: string
 }
 
+export interface RegisterRequest {
+	first_name: string
+	last_name: string
+	email: string
+	password: string
+	re_password: string
+	role: 'customer' | 'agent'
+}
+
 export interface RegisterResponse extends User {}
