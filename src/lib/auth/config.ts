@@ -8,3 +8,11 @@ export const authConfig = {
 	accessTokenMaxAge: process.env.ACCESS_TOKEN_MAX_AGE || 60 * 60,
 	refreshTokenMaxAge: process.env.REFRESH_TOKEN_MAX_AGE || 60 * 60 * 24 * 7
 }
+
+// Логируем конфигурацию для отладки
+console.log('Auth config loaded:', {
+	backendUrl: authConfig.backendUrl,
+	accessTokenMaxAge: authConfig.accessTokenMaxAge,
+	refreshTokenMaxAge: authConfig.refreshTokenMaxAge,
+	env: process.env.NODE_ENV
+})
